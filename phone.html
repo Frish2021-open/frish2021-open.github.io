@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="/style/pc.css" rel="stylesheet" type="text/css"/>
+        <title></title>
+    </head>
+    <body background="/img/background 2.jpg" Background-size:cover; class="body">
+        <script>
+            document.oncontextmenu = function () { return false; };
+document.onkeydown = function () {
+    if (window.event && window.event.keyCode == 123) {
+        event.keyCode = 0;
+        event.returnValue = false;
+        return false;
+    }
+};
+//按键触发
+document.onkeydown = function(){
+//禁止ctrl+u
+if (event.ctrlKey && window.event.keyCode==85){
+return false;
+}
+//禁止 F12
+if (window.event && window.event.keyCode == 123) {
+event.keyCode = 0;
+event.returnValue = false;
+}
+//禁止ctrl+s
+if (event.ctrlKey && window.event.keyCode==83){
+return false;
+}
+//禁止 F5 
+if (window.event && window.event.keyCode == 116) {
+event.keyCode = 0;
+event.returnValue = false;
+}
+}
+//网站禁止右键
+document.body.oncontextmenu = function() {
+self.event.returnValue=false
+};
+</script>
+        <script>
+            var t = null;
+    t = setTimeout(time,1000);//开始执行
+    function time()
+    {
+    clearTimeout(t);//清除定时器
+    dt = new Date();
+    var y=dt.getYear()+1900;
+    var mm=dt.getMonth()+1;
+    var d=dt.getDate();
+    var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+    var day=dt.getDay();
+    var h=dt.getHours();
+    var m=dt.getMinutes();
+    var s=dt.getSeconds();
+    if(h<10){h="0"+h;}
+    if(m<10){m="0"+m;}
+    if(s<10){s="0"+s;}
+    document.getElementById("time").innerHTML = h+":"+m+":"+s+"";
+    t = setTimeout(time,1000); //设定定时器，循环执行           
+    }
+            </script>
+        <input type="text" id="mc" class="newbing" style= "border:0;" placeholder="输入你想搜索的内容"/>
+
+    <button id="button" style="display:none;"></button>
+<script>
+var inp = document.getElementById('mc');
+var but = document.getElementById('button');
+
+but.onclick = function(){
+    frish();
+}
+
+var input = document.getElementById("mc");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("button").click();
+    }
+});
+
+function frish(){
+    var url = 'https://cn.bing.com/search?q=' + inp.value;
+    window.open(url);
+}
+</script>
+<div class="newtime">
+    <span id = "time" style="text-align: center;display:block; font-size: 100px;" font-color="#FF0000"></span>
+</div>
+<div class = "newabout">
+    <div class="footer">
+    <h4><a href="404.html">Frish2021</a>||<a href="javascript:void(0)" onclick="displayWindow()">
+        关于起始页
+    </a>
+</div>
+</div>
+    </div>
+    <!--用来引出悬浮窗口的div-->
+		<div>
+		</div>
+		<!--悬浮窗口-->
+		<div id="window" class="window_css2">
+                <h1 align="center">关于起始页</h1>
+                <h2 align="center">起始页版本:3.04.6</h2>
+                <h2 align="center">起始页作者:<a href="thecah.html" style="color: #000;">Frish2021</a></h2>
+                <h2 align="center">什么没有做但是也见证过起始页的发展的人:</h2>
+                <h2 align="center">1,WeddedMercury15</h2>
+                <h2 align="center">2,dxr_xie2019</h2>
+                <h2 align="center">3,HanFer</h2>
+                <h2 align="center">4,Huangyu__id</h2>
+                <h2 align="center">群号:487195612</h2>
+                <h2 align="center">起始页chrome插件版本下载:<a href="#">chrome插件下载</a></h2>
+                <h2 align="center">起始页插件版本，支持Edge，chrome浏览器</h2>
+                <h2 align="center">起始页插件版本:2.0</h2>
+                <h2 align="center"><a href="javascript:void(0)" onclick="hideWindow()">返回</a></h2>
+		</div>
+        <script>
+            /*当点击调用此方法后,将悬浮窗口显示出来,背景变暗*/
+            function displayWindow() {
+                /*悬浮窗口的显示,需要将display变成block*/
+                document.getElementById("window").style.display = "block";
+            }
+    
+            /*当点击调用此方法,将悬浮窗口和背景全部隐藏*/
+            function hideWindow() {
+                document.getElementById("window").style.display = "none";
+            }
+        </script>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28208212&auto=1&height=66" style="position:fixed; bottom:0; left:0;"></iframe>
+        <script src="js/index.js"></script>
+    </body>
+</html>

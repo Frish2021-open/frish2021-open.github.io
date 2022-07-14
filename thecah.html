@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="img/webico.ico" type="image/x-icon">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body class="body">
+    <style>
+        .body{
+            background-color: black;
+        }
+
+        .zi{
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+<div class="zi">
+    <marquee direction="up"
+         behavior="scroll"><br>
+         <h1 align="center">谢鸣彩蛋</h1>
+         <h1 align="center">Frish2021---作者</h1>
+         <h1 align="center">WeddedMercury15 --- 提出问题</h1>
+         <h1 align="center">dxr_xie2019 --- 见证者</h1>
+         <h1 align="center">HanFer --- 见证者</h1>
+         <h1 align="center">Huangyu__id --- 提供主机者</h1>
+         <h1 align="center">我的QQ:1573880184</h1>
+         <h1 align="center">我的WeChat:xuzhixuan20100422</h1>
+         <h1 align="center">我的邮箱:1573880184@qq.com</h1>
+         <h1 align="center">我的Bilibili:屑Frish2021</h1>
+         <h1 align="center">官方网站:www.frish2021.gq</h1>
+         <h1 align="center">:)</h1>
+    </marquee>
+    <script>
+        var div = document.querySelector('div');
+        var time = 28;
+        change();
+        setInterval(change, 1000);
+
+        function change() {
+            if (time == 0) {
+                location.href = 'index.html';
+            } else {
+                time--;
+            }
+        }
+</script>
+<script type="text/javascript">
+            
+    document.oncontextmenu = function () { return false; };
+                document.onkeydown = function () {
+                    if (window.event && window.event.keyCode == 123) {
+                        event.keyCode = 0;
+                        event.returnValue = false;
+                        return false;
+                    }
+                };
+                //按键触发
+            document.onkeydown = function(){
+                //禁止ctrl+u
+                if (event.ctrlKey && window.event.keyCode==85){
+                return false;
+                }
+                //禁止 F12
+                if (window.event && window.event.keyCode == 123) {
+                event.keyCode = 0;
+                event.returnValue = false;
+                }
+                //禁止ctrl+s
+                if (event.ctrlKey && window.event.keyCode==83){
+                return false;
+                }
+                //禁止 F5 
+                if (window.event && window.event.keyCode == 116) {
+                event.keyCode = 0;
+                event.returnValue = false;
+                }
+                }
+                //网站禁止右键
+                document.body.oncontextmenu = function() {
+                self.event.returnValue=false
+            };
+                </script>
+</div>
+</body>
+</html>

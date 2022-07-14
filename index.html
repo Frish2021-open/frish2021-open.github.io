@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./style/pc.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/webico.ico" type="image/x-icon">
+    <title>Frish2021的小导航</title>
+</head>
+<body background="img/background.jpg" Background-size:cover class="body1" id="bg" onclick="displayWindow2()">
+    <script type="text/javascript">  
+        var userAgent = navigator.userAgent.toLowerCase();
+            var platform;
+            if(userAgent == null || userAgent == ''){
+                platform = 'WEB' ; 
+            }else{
+                if(userAgent.indexOf("android") != -1 ){ 
+                    platform = 'ANDROID';
+                    location.href = "phone.html";
+                }else if(userAgent.indexOf("iphone") != -1){ 
+                    platform = 'IOS';
+                    location.href = "phone.html";
+                }else if(userAgent.indexOf("ipad") != -1 || userAgent.indexOf("ipad Air") != -1 || userAgent.indexOf("ipad Mini") != -1 || userAgent.indexOf("ipad Pro") != -1){
+                    platform = 'IOS';
+                    location.href = "ipad.html";
+                }else if(userAgent.indexOf("windows phone") != -1 ){ 
+                    platform = 'WP';
+                    location.href = "phone.html";
+                }else if(userAgent.indexOf("XiaomiPad") != -1 ){
+                    platform = 'ANDROID';
+                    location.href = "ipad.html";
+                }else{
+                    platform = 'WEB' ;
+                    location.href = "#";
+                }
+            }
+        </script>
+    <script>
+        var t = null;
+t = setTimeout(time,1000);//开始执行
+function time()
+{
+clearTimeout(t);//清除定时器
+dt = new Date();
+var y=dt.getYear()+1900;
+var mm=dt.getMonth()+1;
+var d=dt.getDate();
+var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+var day=dt.getDay();
+var h=dt.getHours();
+var m=dt.getMinutes();
+var s=dt.getSeconds();
+if(h<10){h="0"+h;}
+if(m<10){m="0"+m;}
+if(s<10){s="0"+s;}
+document.getElementById("time").innerHTML =  h+":"+m+":"+s+"";
+t = setTimeout(time,1000); //设定定时器，循环执行           
+}
+        </script>
+        <script>
+                        document.oncontextmenu = function () { return false; };
+            document.onkeydown = function () {
+                if (window.event && window.event.keyCode == 123) {
+                    event.keyCode = 0;
+                    event.returnValue = false;
+                    return false;
+                }
+            };
+            //按键触发
+        document.onkeydown = function(){
+            //禁止ctrl+u
+            if (event.ctrlKey && window.event.keyCode==85){
+            return false;
+            }
+            //禁止 F12
+            if (window.event && window.event.keyCode == 123) {
+            event.keyCode = 0;
+            event.returnValue = false;
+            }
+            //禁止ctrl+s
+            if (event.ctrlKey && window.event.keyCode==83){
+            return false;
+            }
+            //禁止 F5 
+            if (window.event && window.event.keyCode == 116) {
+            event.keyCode = 0;
+            event.returnValue = false;
+            }
+            }
+            //网站禁止右键*/
+        </script>
+    <input id="mc" class="bing" style= "border:0;" placeholder="输入你想搜索的内容" />
+    <button id="button" style="display:none;"></button>
+<script>
+var inp = document.getElementById('mc');
+var but = document.getElementById('button');
+
+but.onclick = function(){
+    frish();
+}
+
+var input = document.getElementById("mc");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("button").click();
+    }
+});
+function frish(){
+    var url = uu + inp.value;
+    window.open(url);
+}
+</script>
+<div class="time">
+    <span id = "time" style="text-align: center;display:block;" font-color="#FF0000"></span>
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<div id="aplayer" class="aplayer" data-autoplay="false"  data-id="28208212" data-server="netease" data-type="song" data-fixed="true" data-listfolded="true" data-order="random" data-theme="#F58EA8"></div>
+<script src="https://unpkg.com/meting@1.2.0/dist/Meting.min.js"></script>
+<div class = "about">
+    <h4><a href="javascript:void(0)" onclick="show();">Frish2021</a>||<a href="javascript:void(0)" onclick="displayWindow()">
+        关于起始页
+    </a>
+    </div>
+    <!--用来引出悬浮窗口的div-->
+		<!--悬浮窗口-->
+		<div id="window" class="window_css">
+                <h1 align="center">关于起始页</h1>
+                <h2 align="center">起始页版本:3.04.6</h2>
+                <h2 align="center">起始页作者:<a href="thecah.html" style="color: #000;">Frish2021</a></h2>
+                <h2 align="center">什么没有做但是也见证过起始页的发展的人:</h2>
+                <h2 align="center">1,WeddedMercury15</h2>
+                <h2 align="center">2,dxr_xie2019</h2>
+                <h2 align="center">3,HanFer</h2>
+                <h2 align="center">4,Huangyu__id</h2>
+                <h2 align="center">群号:487195612</h2>
+                <h2 align="center">起始页chrome插件版本下载:<a href="#">chrome插件下载</a></h2>
+                <h2 align="center">起始页插件版本，支持Edge，chrome浏览器</h2>
+                <h2 align="center">起始页插件版本:2.0</h2>
+                <h2 align="center"><a href="javascript:hideWindow();">返回</a></h2>
+		</div>
+        <script>
+            /*当点击调用此方法后,将悬浮窗口显示出来,背景变暗*/
+
+            function displayWindow() {
+            /*悬浮窗口的显示,需要将display变成block*/
+            document.getElementById("window").style.display = "block";
+        }
+
+        /*当点击调用此方法,将悬浮窗口和背景全部隐藏*/
+        function hideWindow() {
+            document.getElementById("window").style.display = "none";
+        }
+        </script>
+           <div id="frish" class="window_css3">
+            <form action="https://www.bilibili.com" style="border: none;" target="_self">
+                <button value="" class="bili" ></button>
+            </form>
+            <form action="https://www.github.com" style="border: none;" target="_self">
+                <button value="" class="github" ></button>
+            </form>
+            <form action="https://translate.google.cn/" style="border: none;" target="_self" id="google">
+                <button value="" class="google" ></button>
+            </form>
+            <form action="https://gitee.com/" style="border: none;" target="_self">
+                <button value="" class="gitee" ></button>
+            </form>
+            <h3 align="center" style="margin-top: 700px;"><a href="javascript:void(0)" onclick="fri();">返回</a></h3>
+           </div>
+           <script>
+            function fr() {
+            /*悬浮窗口的显示,需要将display变成block*/
+            document.getElementById("frish").style.display = "block";
+        }
+
+        /*当点击调用此方法,将悬浮窗口和背景全部隐藏*/
+                function fri() {
+            document.getElementById("frish").style.display = "none";
+                }
+           </script>
+    <script>
+        document.oncontextmenu = function () { 
+            fr();
+            return false; 
+        };
+    </script>
+    <script>
+        function show(){
+            document.getElementById("frish2021").style.display = "block";
+        }
+        function shows(){
+            document.getElementById("frish2021").style.display = "none";
+        }
+    </script>
+    <div id="frish2021" class="window_css4">
+        <h1 align="center">关于我---Frish2021</h1>
+            <h2>我是Frish2021,我地域在清远市清城区,的12岁快初中的小学生</h2>
+            <h2>Frish2021这个名字的由来,e......</h2>
+            <h2>其实是一次偶然,之前我都叫hiworld或者xuzhixuan6663.</h2>
+            <h2>hiworld其实我随便取的，我喜欢hiworld这个词语所以就取了。</h2>
+            <h2>xuzhixuan6663,其实是我的名字加个6663就来了。</h2>
+            <h2>我就很喜欢Java和html</h2>
+            <h2>我的github:https://github.com/Frish2021-open</h2>
+            <h2>如果要赞助我的话</h2>
+            <h2>请加群487195612</h2>
+            <h2>租一台属于自己的服务器把，如果不想这样，就请把赞助的money给WeddedMercury15.</h2>
+            <h2>如想返回请<a href="index.html">点击这里</a></h2>
+            <h2>如想下载起始页的插件版请<a href="#">点击这里</a></h2>
+        <h2 align="center"><a href="javascript:void(0)" onclick="shows();">返回</a></h2>
+    </div>
+<script>
+    var uu;
+    var web = document.getElementById("mc");
+    var app = document.getElementById("google");
+var lang = navigator.language || navigator.userLanguage; //常规浏览器语言和IE浏览器
+lang = lang.substr(0, 2); //截取lang前2位字符
+    if (lang == 'zh') {
+        web.setAttribute("placeholder","输入你想搜索的内容");
+        app.setAttribute("action","https://translate.google.cn/");
+        document.title = "Frish2021起始页";
+        uu = 'https://cn.bing.com/search?q=';
+    }else if(lang == 'en'){
+        web.setAttribute("placeholder","Enter what you want to search");
+        app.setAttribute("action","https://translate.google.com/");
+        document.title = "Frish2021 Start Page";
+        uu = 'https://www.google.com/search?q=';
+    }else if(lang == 'ja'){
+        web.setAttribute("placeholder","検索したいものを入力してください");
+        app.setAttribute("action","https://translate.google.com/");
+        document.title = "Frish2021スタートページ";
+        uu = 'https://www.google.com/search?q=';
+    }else if(lang == 'ru'){
+        web.setAttribute("placeholder","Введите то, что вы хотите найти");
+        app.setAttribute("action","https://translate.google.com/");
+        document.title = "Стартовая страница Frish2021";
+        uu = 'https://www.google.com/search?q=';
+    }else if(lang == 'ko'){
+        web.setAttribute("placeholder","검색할 내용을 입력하세요");
+        app.setAttribute("action","https://translate.google.com/");
+        document.title = "Frish2021 시작 페이지";
+        uu = 'https://www.google.com/search?q=';
+    }else{
+        web.setAttribute("placeholder","Enter what you want to search");
+        app.setAttribute("action","https://translate.google.com/");
+        document.title = "Frish2021 Start Page";
+        uu = 'https://www.google.com/search?q=';
+}
+</script>
+</body>
+</html>
